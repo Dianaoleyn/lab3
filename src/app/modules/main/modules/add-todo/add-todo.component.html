@@ -1,0 +1,20 @@
+<div class="block" [formGroup]="form">
+  <mat-form-field class="block__item">
+    <mat-label>Задача</mat-label>
+    <textarea matInput
+              cdkTextareaAutosize
+              formControlName="task"
+              type="text"
+              [required]="true"
+              cdkAutosizeMinRows="22"
+              cdkAutosizeMaxRows="22"
+              placeholder="Добавьте описание задачи">
+    </textarea>
+    <mat-error *ngIf="form.get('task').hasError('required')">Задача не может быть пустой</mat-error>
+  </mat-form-field>
+</div>
+
+<div class="bottom">
+  <button mat-stroked-button color="primary" [disabled]="form.invalid" (click)="onClickSave()">Сохранить</button>
+  <button mat-stroked-button color="primary" (click)="navToList()">Отменить</button>
+</div>

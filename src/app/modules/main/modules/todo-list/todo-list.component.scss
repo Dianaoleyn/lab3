@@ -1,0 +1,45 @@
+@import "../../../../common/styles/_theming.scss";
+:host {
+  width: 78%;
+  margin-left: 2%;
+  height: 100%;
+}
+
+.block {
+  height: 80%;
+  @include pageBlock();
+  background: #fff;
+  overflow: auto;
+
+  .mat-row {
+    position: relative;
+    cursor: pointer;
+    z-index: 0;
+    &:hover {
+      background: rgba(0,0,0,.04);
+    }
+  }
+
+  .active {
+    background: rgba(0,0,0,.08);
+  }
+}
+
+.bottom {
+  @include wrapperFlex(row, flex-end, center);
+  height: calc(20% - 31px - 3%);
+  width: auto;
+  margin-top: 2%;
+  @include pageBlock();
+  background: #fff;
+
+  :not(:first-child) {
+    flex: 1;
+    margin-left: 10px;
+  }
+
+  :first-child {
+    flex: 3;
+    width: auto;
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../../../common/styles/_theming.scss";
+:host {
+  width: 78%;
+  margin-left: 2%;
+  height: 100%;
+}
+
+.block {
+  @include pageBlock();
+  background: #fff;
+  @include wrapperFlex(column, stretch, normal);
+  height: 85%;
+}
+
+.bottom {
+  @include pageBlock;
+  @include wrapperFlex(row, flex-end, center);
+  background: #fff;
+  margin-top: 2%;
+  height: calc(13% - 35px);
+
+  :last-child {
+    margin-left: 10px;
+  }
+}
+

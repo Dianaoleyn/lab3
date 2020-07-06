@@ -1,0 +1,9 @@
+@import "./common/styles/_theming.scss";
+
+.block {
+  padding-top: 42px;
+  width: 100%;
+  @include wrapperFlex(row, center, center);
+  height: calc(100% - 42px - 5px);
+}
+
